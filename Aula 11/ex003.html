@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de multas</title>
+</head>
+    A que velocidade passou: <input type="number" name="" id="velocidade"> <br/>
+    <input type="button" value="Será multado?" onclick="clicar()"> <br/>
+<body>
+    <div id="resultado"></div>
+    <script>
+        function clicar(){
+            var velocidade = document.getElementById('velocidade')
+            var velocidadeformat = Number(velocidade.value.replace(",","."))
+            var resultado = document.querySelector('div#resultado')
+            if(velocidadeformat>=50){
+                resultado.innerHTML = ('Você será multado')
+            }
+            else{
+                resultado.innerHTML = ('Você não será multado')
+            }
+        }
+    </script>   
+</body>
+</html>

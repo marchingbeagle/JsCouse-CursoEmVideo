@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: rgb(229, 216, 255);
+            font: normal 30pt arial;
+        }
+        body{   
+            color: white;
+            font: normal 20pt arial;
+            background-color: rgb(54, 54, 54);
+        }
+    </style>
+    <h1>
+        Calculadora de media de provas:
+    </h1>
+</head>
+<body>
+    
+    <script>
+        var notafinal = 0
+        var notaparcial = 0
+
+        var avaliacoes = Number(window.prompt('Quantas avaliações teve na matéria?'))
+        for(var i =+ avaliacoes; i>0; i--){
+                notaparcial = Number((window.prompt(`Qual a nota da ${i}ª avaliação?`)))
+                if(notaparcial)
+                soma();
+        }
+        var media = notafinal / avaliacoes
+
+        document.write(`O número de avaliacoes foi de: ${avaliacoes}<br/>`)
+        document.write(`A sua media final é: ${media.toFixed(2)}<br/>`)
+
+        if(media >= 6){document.write('Parabéns! Você esta na média')}        
+        else{document.write("Você não esta na média")}
+    
+        function soma(){
+            notafinal = notafinal + notaparcial
+        }
+    </script>
+</body>
+</html>
